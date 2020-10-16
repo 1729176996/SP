@@ -12,9 +12,18 @@
 		<div class="main" id="main">
 			<div class="header">头部</div>
 			<div class="content">
-				
+				<div class="item" v-for="(item,index) of list">
+					<div>{{item.title}}</div>
+				</div>
 			</div>
-			<div class="footer">底部</div>
+			<div class="footer">
+				<div @click="getData('正在上映')">正在上映</div>
+				<div @click="getData('即将上映')">即将上映</div>
+				<div @click="getData('Top250')">Top250</div>
+				<div @click="getData('口碑榜')">口碑榜</div>
+				<div @click="getData('北美票房榜')">北美票房榜</div>
+				<div @click="getData('新片榜')">新片榜</div>
+			</div>
 		</div>
 	</body>
 	<script src="./js/less.min.js" type="text/javascript" charset="utf-8"></script>
